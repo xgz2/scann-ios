@@ -1,0 +1,20 @@
+PODS:
+  - CameraManager (5.1.3)
+  - SnapKit (5.0.1)
+
+DEPENDENCIES:
+  - CameraManager (~> 5.1)
+  - SnapKit (~> 5.0.0)
+
+SPEC REPOS:
+  https://github.com/CocoaPods/Specs.git:
+    - CameraManager
+    - SnapKit
+
+SPEC CHECKSUMS:
+  CameraManager: 73936a52093081ba5e44914e8120ab511360f5d4
+  SnapKit: 97b92857e3df3a0c71833cce143274bf6ef8e5eb
+
+PODFILE CHECKSUM: a72b1832eafd9d4a3c1efa5c2043950954db3a8a
+
+COCOAPODS: 1.9.3
