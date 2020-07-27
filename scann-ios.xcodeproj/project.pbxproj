@@ -3,22 +3,32 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
+		032D995124CF65DD0004DD95 /* MainTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 032D995024CF65DD0004DD95 /* MainTabBarController.swift */; };
 		03AA35F324C8D7A500AB9A48 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03AA35F224C8D7A500AB9A48 /* AppDelegate.swift */; };
 		03AA35F924C8D7AF00AB9A48 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 03AA35F824C8D7AF00AB9A48 /* Assets.xcassets */; };
 		03AA35FC24C8D7AF00AB9A48 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 03AA35FB24C8D7AF00AB9A48 /* Preview Assets.xcassets */; };
+		03AA360824CA389100AB9A48 /* PantryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03AA360724CA389100AB9A48 /* PantryViewController.swift */; };
+		03AA360A24CA389E00AB9A48 /* CameraViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03AA360924CA389E00AB9A48 /* CameraViewController.swift */; };
+		03AA360C24CA38B100AB9A48 /* SearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03AA360B24CA38B000AB9A48 /* SearchViewController.swift */; };
+		03AA360E24CA38DB00AB9A48 /* DashViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03AA360D24CA38DB00AB9A48 /* DashViewController.swift */; };
 		A1190C982BBFE2C0CE61212F /* Pods_scann_ios.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A1D6D06C3706CFA21BD53F99 /* Pods_scann_ios.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		032D995024CF65DD0004DD95 /* MainTabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTabBarController.swift; sourceTree = "<group>"; };
 		03AA35EF24C8D7A500AB9A48 /* scann-ios.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "scann-ios.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		03AA35F224C8D7A500AB9A48 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		03AA35F824C8D7AF00AB9A48 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		03AA35FB24C8D7AF00AB9A48 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		03AA360024C8D7AF00AB9A48 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		03AA360724CA389100AB9A48 /* PantryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PantryViewController.swift; sourceTree = "<group>"; };
+		03AA360924CA389E00AB9A48 /* CameraViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CameraViewController.swift; sourceTree = "<group>"; };
+		03AA360B24CA38B000AB9A48 /* SearchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchViewController.swift; sourceTree = "<group>"; };
+		03AA360D24CA38DB00AB9A48 /* DashViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DashViewController.swift; sourceTree = "<group>"; };
 		6F3C63AF6252C0C96327417E /* Pods-scann-ios.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-scann-ios.release.xcconfig"; path = "Target Support Files/Pods-scann-ios/Pods-scann-ios.release.xcconfig"; sourceTree = "<group>"; };
 		A1D6D06C3706CFA21BD53F99 /* Pods_scann_ios.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_scann_ios.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		BE236617CF5B90C01F315F69 /* Pods-scann-ios.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-scann-ios.debug.xcconfig"; path = "Target Support Files/Pods-scann-ios/Pods-scann-ios.debug.xcconfig"; sourceTree = "<group>"; };
@@ -59,6 +69,7 @@
 			children = (
 				03AA35F224C8D7A500AB9A48 /* AppDelegate.swift */,
 				03AA35F824C8D7AF00AB9A48 /* Assets.xcassets */,
+				03AA360624CA382000AB9A48 /* Controllers */,
 				03AA360024C8D7AF00AB9A48 /* Info.plist */,
 				03AA35FA24C8D7AF00AB9A48 /* Preview Content */,
 			);
@@ -73,13 +84,24 @@
 			path = "Preview Content";
 			sourceTree = "<group>";
 		};
+		03AA360624CA382000AB9A48 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				03AA360724CA389100AB9A48 /* PantryViewController.swift */,
+				03AA360924CA389E00AB9A48 /* CameraViewController.swift */,
+				03AA360B24CA38B000AB9A48 /* SearchViewController.swift */,
+				03AA360D24CA38DB00AB9A48 /* DashViewController.swift */,
+				032D995024CF65DD0004DD95 /* MainTabBarController.swift */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
 		4E0B2A7A0BCFB227A346939E /* Pods */ = {
 			isa = PBXGroup;
 			children = (
 				BE236617CF5B90C01F315F69 /* Pods-scann-ios.debug.xcconfig */,
 				6F3C63AF6252C0C96327417E /* Pods-scann-ios.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -205,7 +227,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				03AA360824CA389100AB9A48 /* PantryViewController.swift in Sources */,
 				03AA35F324C8D7A500AB9A48 /* AppDelegate.swift in Sources */,
+				032D995124CF65DD0004DD95 /* MainTabBarController.swift in Sources */,
+				03AA360E24CA38DB00AB9A48 /* DashViewController.swift in Sources */,
+				03AA360C24CA38B100AB9A48 /* SearchViewController.swift in Sources */,
+				03AA360A24CA389E00AB9A48 /* CameraViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
