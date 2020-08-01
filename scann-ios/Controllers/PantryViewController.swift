@@ -8,14 +8,38 @@
 
 import UIKit
 
-class PantryViewController: UIViewController {
+class PantryViewController: UICollectionViewController, UICollectionViewDelegateFlowLayout {
+    
+    private let reuseIdentifier : String = "pantryCell"
+    private let sections : [String] = ["produce", "meat and poultry", "snacks"]
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        view.backgroundColor = .white
+        
+        collectionView.backgroundColor = .white
 
         setupNavigationBarItems()
+        setupCollections()
+    }
+    
+    private func setupCollections() {
+        self.clearsSelectionOnViewWillAppear = false
+        self.collectionView!.register(CategoryCell.self, forCellWithReuseIdentifier: reuseIdentifier)
+    }
+    
+    override func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+        // #warning Incomplete implementation, return the number of items
+        return 3
+    }
+
+    override func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: reuseIdentifier, for: indexPath) as! CategoryCell
+    
+        return cell
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
+        return CGSize(width: view.frame.width, height: 175)
     }
     
     private func setupNavigationBarItems() {

@@ -17,13 +17,16 @@ class MainTabBarController: UITabBarController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        let layout: UICollectionViewFlowLayout = UICollectionViewFlowLayout()
+        layout.headerReferenceSize = CGSize(width: self.view.frame.size.width, height: 30)
                 
-        let pantryNav = generateNavController(vc: PantryViewController(), title: "Pantry", image: UIImage(named: "pantryImage")!)
+        let pantryNav = generateNavController(vc: PantryViewController(collectionViewLayout: layout), title: "Pantry", image: UIImage(named: "pantryImage")!)
         let cameraNav = generateNavController(vc: CameraViewController(), title: "Scan", image: UIImage(named: "cameraImage")!)
         let searchNav = generateNavController(vc: SearchViewController(), title: "Search", image: UIImage(named: "searchImage")!)
         let dashNav = generateNavController(vc: DashViewController(), title: "Dash", image: UIImage(named:"dashImage")!)
 
-        UITabBar.appearance().backgroundColor = .clear
+        UITabBar.appearance().backgroundColor = .white
         UITabBar.appearance().backgroundImage = UIImage()
         tabBar.shadowImage = UIImage()
         tabBar.tintColor = .black
