@@ -29,6 +29,11 @@ class PantryViewController: UICollectionViewController, UICollectionViewDelegate
         setupCollections()
     }
     
+    func showItemDetail(forItem item: Item) {
+        let itemDetailViewController = ItemDetailViewController()
+        present(itemDetailViewController, animated: true)
+    }
+    
     private func setupCollections() {
         self.clearsSelectionOnViewWillAppear = false
         self.collectionView!.register(CategoryCell.self, forCellWithReuseIdentifier: reuseIdentifier)
@@ -44,11 +49,17 @@ class PantryViewController: UICollectionViewController, UICollectionViewDelegate
     override func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: reuseIdentifier, for: indexPath) as! CategoryCell
         cell.itemCategory = itemCategories?[indexPath.item]
+        cell.pantryViewController = self
         return cell
     }
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
         return CGSize(width: view.frame.width, height: 175)
+    }
+    
+    // Give us more veg
+    override func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        print("selected")
     }
     
     private func setupNavigationBarItems() {

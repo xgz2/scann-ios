@@ -29,6 +29,10 @@
 		035DA53524D60B6400603371 /* Montserrat-SemiBoldItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 035DA52324D60B6300603371 /* Montserrat-SemiBoldItalic.ttf */; };
 		035DA53624D60B6400603371 /* Montserrat-Medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 035DA52424D60B6400603371 /* Montserrat-Medium.ttf */; };
 		035DA53824D60E9C00603371 /* Models.swift in Sources */ = {isa = PBXBuildFile; fileRef = 035DA53724D60E9C00603371 /* Models.swift */; };
+		0363A37C24D6AE4E00926E14 /* ItemDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0363A37B24D6AE4E00926E14 /* ItemDetailViewController.swift */; };
+		0363A37F24D7744D00926E14 /* LoadingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0363A37E24D7744D00926E14 /* LoadingView.swift */; };
+		0363A38124D7747600926E14 /* CGRect+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0363A38024D7747600926E14 /* CGRect+Extensions.swift */; };
+		0363A38324D7749600926E14 /* UIColor+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0363A38224D7749600926E14 /* UIColor+Extensions.swift */; };
 		03AA35F324C8D7A500AB9A48 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03AA35F224C8D7A500AB9A48 /* AppDelegate.swift */; };
 		03AA35F924C8D7AF00AB9A48 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 03AA35F824C8D7AF00AB9A48 /* Assets.xcassets */; };
 		03AA35FC24C8D7AF00AB9A48 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 03AA35FB24C8D7AF00AB9A48 /* Preview Assets.xcassets */; };
@@ -62,6 +66,10 @@
 		035DA52324D60B6300603371 /* Montserrat-SemiBoldItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Montserrat-SemiBoldItalic.ttf"; sourceTree = "<group>"; };
 		035DA52424D60B6400603371 /* Montserrat-Medium.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Montserrat-Medium.ttf"; sourceTree = "<group>"; };
 		035DA53724D60E9C00603371 /* Models.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Models.swift; sourceTree = "<group>"; };
+		0363A37B24D6AE4E00926E14 /* ItemDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemDetailViewController.swift; sourceTree = "<group>"; };
+		0363A37E24D7744D00926E14 /* LoadingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadingView.swift; sourceTree = "<group>"; };
+		0363A38024D7747600926E14 /* CGRect+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CGRect+Extensions.swift"; sourceTree = "<group>"; };
+		0363A38224D7749600926E14 /* UIColor+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+Extensions.swift"; sourceTree = "<group>"; };
 		03AA35EF24C8D7A500AB9A48 /* scann-ios.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "scann-ios.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		03AA35F224C8D7A500AB9A48 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		03AA35F824C8D7AF00AB9A48 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -107,6 +115,8 @@
 		035DA50E24D60ACE00603371 /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
+				0363A38024D7747600926E14 /* CGRect+Extensions.swift */,
+				0363A38224D7749600926E14 /* UIColor+Extensions.swift */,
 				035DA50F24D60AE100603371 /* UIFont+Extensions.swift */,
 			);
 			path = Extensions;
@@ -136,6 +146,14 @@
 			);
 			name = Fonts;
 			path = "New Group";
+			sourceTree = "<group>";
+		};
+		0363A37D24D7743D00926E14 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				0363A37E24D7744D00926E14 /* LoadingView.swift */,
+			);
+			path = Views;
 			sourceTree = "<group>";
 		};
 		03AA35E624C8D7A500AB9A48 = {
@@ -168,6 +186,7 @@
 				035DA50E24D60ACE00603371 /* Extensions */,
 				035DA51224D60AF900603371 /* Fonts */,
 				035DA50924D4E14300603371 /* Models */,
+				0363A37D24D7743D00926E14 /* Views */,
 			);
 			path = "scann-ios";
 			sourceTree = "<group>";
@@ -188,6 +207,7 @@
 				03AA360B24CA38B000AB9A48 /* SearchViewController.swift */,
 				03AA360D24CA38DB00AB9A48 /* DashViewController.swift */,
 				032D995024CF65DD0004DD95 /* MainTabBarController.swift */,
+				0363A37B24D6AE4E00926E14 /* ItemDetailViewController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -221,6 +241,7 @@
 				03AA35EC24C8D7A500AB9A48 /* Frameworks */,
 				03AA35ED24C8D7A500AB9A48 /* Resources */,
 				8FC8DF138A8EA7BD62D5D31C /* [CP] Embed Pods Frameworks */,
+				0EC188C05393484EA70182BD /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -317,6 +338,23 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
+		0EC188C05393484EA70182BD /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-scann-ios/Pods-scann-ios-resources-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Copy Pods Resources";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-scann-ios/Pods-scann-ios-resources-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-scann-ios/Pods-scann-ios-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
 		8FC8DF138A8EA7BD62D5D31C /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -341,8 +379,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0363A37C24D6AE4E00926E14 /* ItemDetailViewController.swift in Sources */,
+				0363A38124D7747600926E14 /* CGRect+Extensions.swift in Sources */,
 				03AA360824CA389100AB9A48 /* PantryViewController.swift in Sources */,
+				0363A38324D7749600926E14 /* UIColor+Extensions.swift in Sources */,
 				03AA35F324C8D7A500AB9A48 /* AppDelegate.swift in Sources */,
+				0363A37F24D7744D00926E14 /* LoadingView.swift in Sources */,
 				035DA50D24D5F7C300603371 /* CategoryCell.swift in Sources */,
 				032D995124CF65DD0004DD95 /* MainTabBarController.swift in Sources */,
 				035DA53824D60E9C00603371 /* Models.swift in Sources */,
@@ -478,6 +520,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_ASSET_PATHS = "\"scann-ios/Preview Content\"";
 				DEVELOPMENT_TEAM = 92NLWY33YH;
+				ENABLE_BITCODE = NO;
 				ENABLE_PREVIEWS = YES;
 				INFOPLIST_FILE = "scann-ios/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
@@ -500,6 +543,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_ASSET_PATHS = "\"scann-ios/Preview Content\"";
 				DEVELOPMENT_TEAM = 92NLWY33YH;
+				ENABLE_BITCODE = NO;
 				ENABLE_PREVIEWS = YES;
 				INFOPLIST_FILE = "scann-ios/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 12.0;

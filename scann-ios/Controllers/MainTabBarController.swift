@@ -6,9 +6,10 @@
 //  Copyright © 2020 Scann. All rights reserved.
 //
 
+import BlinkReceipt
 import UIKit
 
-class MainTabBarController: UITabBarController {
+class MainTabBarController: UITabBarController, BRScanResultsDelegate {
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)

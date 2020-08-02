@@ -10,6 +10,8 @@ import UIKit
 
 extension UIFont {
     
+    static let _18MontserratRegular = UIFont(name: "Montserrat-Regular", size: 18)
     static let _20MontserratRegular = UIFont(name: "Montserrat-Regular", size: 20)
     
+    static let _20MontserratBold = UIFont(name: "Montserrat-Bold", size:20)
 }

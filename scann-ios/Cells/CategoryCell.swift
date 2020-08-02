@@ -30,13 +30,14 @@ class CategoryCell: UICollectionViewCell, UICollectionViewDataSource, UICollecti
         return collectionView
     }()
     
-    var itemCategory : ItemCategory? {
+    var itemCategory: ItemCategory? {
         didSet {
             if let name = itemCategory?.name {
                 nameLabel.text = name
             }
         }
     }
+    var pantryViewController: PantryViewController?
     
     override init(frame: CGRect) {
         super.init(frame: frame)
@@ -87,6 +88,13 @@ class CategoryCell: UICollectionViewCell, UICollectionViewDataSource, UICollecti
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, insetForSectionAt section: Int) -> UIEdgeInsets {
         return UIEdgeInsets(top: 0, left: 14, bottom: 0, right: 14)
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, didDeselectItemAt indexPath: IndexPath) {
+        if let item = itemCategory?.items?[indexPath.item] {
+            print(item)
+            pantryViewController!.showItemDetail(forItem: item)
+        }
     }
     
 }

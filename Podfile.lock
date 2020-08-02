@@ -1,20 +1,93 @@
 PODS:
+  - AFNetworking/NSURLSession (3.2.1):
+    - AFNetworking/Reachability
+    - AFNetworking/Security
+    - AFNetworking/Serialization
+  - AFNetworking/Reachability (3.2.1)
+  - AFNetworking/Security (3.2.1)
+  - AFNetworking/Serialization (3.2.1)
+  - BlinkReceipt (1.9.2):
+    - AFNetworking/NSURLSession (~> 3.0)
+    - CHCSVParser (~> 2.1)
+    - GPUImage (~> 0.1)
+    - libextobjc (~> 0.4)
+    - MBProgressHUD (~> 1.0)
+    - SimpleKeychain (~> 0.7)
   - CameraManager (5.1.3)
+  - CHCSVParser (2.1.0)
+  - GPUImage (0.1.7)
+  - libextobjc (0.6):
+    - libextobjc/EXTADT (= 0.6)
+    - libextobjc/EXTConcreteProtocol (= 0.6)
+    - libextobjc/EXTKeyPathCoding (= 0.6)
+    - libextobjc/EXTNil (= 0.6)
+    - libextobjc/EXTSafeCategory (= 0.6)
+    - libextobjc/EXTScope (= 0.6)
+    - libextobjc/EXTSelectorChecking (= 0.6)
+    - libextobjc/EXTSynthesize (= 0.6)
+    - "libextobjc/NSInvocation+EXT (= 0.6)"
+    - "libextobjc/NSMethodSignature+EXT (= 0.6)"
+    - libextobjc/RuntimeExtensions (= 0.6)
+    - libextobjc/UmbrellaHeader (= 0.6)
+  - libextobjc/EXTADT (0.6):
+    - libextobjc/RuntimeExtensions
+  - libextobjc/EXTConcreteProtocol (0.6):
+    - libextobjc/RuntimeExtensions
+  - libextobjc/EXTKeyPathCoding (0.6):
+    - libextobjc/RuntimeExtensions
+  - libextobjc/EXTNil (0.6):
+    - libextobjc/RuntimeExtensions
+  - libextobjc/EXTSafeCategory (0.6):
+    - libextobjc/RuntimeExtensions
+  - libextobjc/EXTScope (0.6):
+    - libextobjc/RuntimeExtensions
+  - libextobjc/EXTSelectorChecking (0.6):
+    - libextobjc/RuntimeExtensions
+  - libextobjc/EXTSynthesize (0.6):
+    - libextobjc/RuntimeExtensions
+  - "libextobjc/NSInvocation+EXT (0.6)":
+    - libextobjc/RuntimeExtensions
+  - "libextobjc/NSMethodSignature+EXT (0.6)":
+    - libextobjc/RuntimeExtensions
+  - libextobjc/RuntimeExtensions (0.6)
+  - libextobjc/UmbrellaHeader (0.6)
+  - MBProgressHUD (1.2.0)
+  - PPBlinkOCR (4.0.0)
+  - SimpleKeychain (0.11.1)
   - SnapKit (5.0.1)
 
 DEPENDENCIES:
+  - BlinkReceipt (~> 1.8)
   - CameraManager (~> 5.1)
+  - PPBlinkOCR (~> 4.0.0)
   - SnapKit (~> 5.0.0)
 
 SPEC REPOS:
+  https://github.com/BlinkReceipt/PodSpecRepo.git:
+    - BlinkReceipt
   https://github.com/CocoaPods/Specs.git:
+    - AFNetworking
     - CameraManager
+    - CHCSVParser
+    - GPUImage
+    - libextobjc
+    - MBProgressHUD
+    - PPBlinkOCR
+    - SimpleKeychain
     - SnapKit
 
 SPEC CHECKSUMS:
+  AFNetworking: b6f891fdfaed196b46c7a83cf209e09697b94057
+  BlinkReceipt: 3670687d85e3f2ae7da924f7a4d8ee1140cf839f
   CameraManager: 73936a52093081ba5e44914e8120ab511360f5d4
+  CHCSVParser: 3bcc7bdb72111a31222e95d57eacceefe4e537e8
+  GPUImage: 733a5f0fab92df9de1c37ba9df520a833ccb406d
+  libextobjc: aed8b7d2b07f511c1a7ecaacb33ea03e327c69b7
+  MBProgressHUD: 3ee5efcc380f6a79a7cc9b363dd669c5e1ae7406
+  PPBlinkOCR: 2a6a4baae938e82d3314ecbf46643e8327af9e1a
+  SimpleKeychain: 0c657949c7afff92337d2ff64052d5eb5c53823e
   SnapKit: 97b92857e3df3a0c71833cce143274bf6ef8e5eb
 
-PODFILE CHECKSUM: a72b1832eafd9d4a3c1efa5c2043950954db3a8a
+PODFILE CHECKSUM: 9d46200e78d66ffc96d452342c2aad5ccb4c5590
 
 COCOAPODS: 1.9.3
