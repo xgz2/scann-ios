@@ -13,10 +13,17 @@ class PantryViewController: UICollectionViewController, UICollectionViewDelegate
     private let reuseIdentifier : String = "pantryCell"
     private let sections : [String] = ["produce", "meat and poultry", "snacks"]
     
+    var itemCategories: [ItemCategory]?
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
         collectionView.backgroundColor = .white
+        
+        ItemCategory.fetchPantryItems { (itemCategories) -> () in
+            self.itemCategories = itemCategories
+            self.collectionView.reloadData()
+        }
 
         setupNavigationBarItems()
         setupCollections()
@@ -28,13 +35,15 @@ class PantryViewController: UICollectionViewController, UICollectionViewDelegate
     }
     
     override func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        // #warning Incomplete implementation, return the number of items
-        return 3
+        if let count = itemCategories?.count {
+            return count
+        }
+        return 0
     }
 
     override func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: reuseIdentifier, for: indexPath) as! CategoryCell
-    
+        cell.itemCategory = itemCategories?[indexPath.item]
         return cell
     }
     

@@ -8,7 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		032D995124CF65DD0004DD95 /* MainTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 032D995024CF65DD0004DD95 /* MainTabBarController.swift */; };
-		035DA50B24D4E16E00603371 /* PantryItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 035DA50A24D4E16E00603371 /* PantryItem.swift */; };
 		035DA50D24D5F7C300603371 /* CategoryCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 035DA50C24D5F7C300603371 /* CategoryCell.swift */; };
 		035DA51024D60AE100603371 /* UIFont+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 035DA50F24D60AE100603371 /* UIFont+Extensions.swift */; };
 		035DA52524D60B6400603371 /* Montserrat-MediumItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 035DA51324D60B5F00603371 /* Montserrat-MediumItalic.ttf */; };
@@ -42,7 +41,6 @@
 
 /* Begin PBXFileReference section */
 		032D995024CF65DD0004DD95 /* MainTabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTabBarController.swift; sourceTree = "<group>"; };
-		035DA50A24D4E16E00603371 /* PantryItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PantryItem.swift; sourceTree = "<group>"; };
 		035DA50C24D5F7C300603371 /* CategoryCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryCell.swift; sourceTree = "<group>"; };
 		035DA50F24D60AE100603371 /* UIFont+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIFont+Extensions.swift"; sourceTree = "<group>"; };
 		035DA51324D60B5F00603371 /* Montserrat-MediumItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Montserrat-MediumItalic.ttf"; sourceTree = "<group>"; };
@@ -101,7 +99,6 @@
 		035DA50924D4E14300603371 /* Models */ = {
 			isa = PBXGroup;
 			children = (
-				035DA50A24D4E16E00603371 /* PantryItem.swift */,
 				035DA53724D60E9C00603371 /* Models.swift */,
 			);
 			path = Models;
@@ -344,7 +341,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				035DA50B24D4E16E00603371 /* PantryItem.swift in Sources */,
 				03AA360824CA389100AB9A48 /* PantryViewController.swift in Sources */,
 				03AA35F324C8D7A500AB9A48 /* AppDelegate.swift in Sources */,
 				035DA50D24D5F7C300603371 /* CategoryCell.swift in Sources */,

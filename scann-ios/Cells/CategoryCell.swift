@@ -30,6 +30,14 @@ class CategoryCell: UICollectionViewCell, UICollectionViewDataSource, UICollecti
         return collectionView
     }()
     
+    var itemCategory : ItemCategory? {
+        didSet {
+            if let name = itemCategory?.name {
+                nameLabel.text = name
+            }
+        }
+    }
+    
     override init(frame: CGRect) {
         super.init(frame: frame)
         setupViews()
@@ -48,9 +56,9 @@ class CategoryCell: UICollectionViewCell, UICollectionViewDataSource, UICollecti
         itemsCollectionView.dataSource = self
         itemsCollectionView.delegate = self
         
-        itemsCollectionView.register(itemCell.self, forCellWithReuseIdentifier: cellId)
+        itemsCollectionView.register(ItemCell.self, forCellWithReuseIdentifier: cellId)
         
-        // Consider using SnapKit later on
+        // Consider using consistent constraint format
         addConstraints(NSLayoutConstraint.constraints(withVisualFormat: "H:|-14-[v0]|", options: NSLayoutConstraint.FormatOptions(), metrics: nil, views: ["v0": nameLabel]))
         
         addConstraints(NSLayoutConstraint.constraints(withVisualFormat: "H:|[v0]|", options: NSLayoutConstraint.FormatOptions(), metrics: nil, views: ["v0": itemsCollectionView]))
@@ -60,11 +68,17 @@ class CategoryCell: UICollectionViewCell, UICollectionViewDataSource, UICollecti
     }
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return 5
+        if let count = itemCategory?.items?.count {
+            return count
+        }
+        return 0
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        return collectionView.dequeueReusableCell(withReuseIdentifier: cellId, for: indexPath)
+        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: cellId, for: indexPath) as! ItemCell
+        cell.item = itemCategory?.items?[indexPath.item]
+        
+        return cell
     }
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
@@ -77,7 +91,15 @@ class CategoryCell: UICollectionViewCell, UICollectionViewDataSource, UICollecti
     
 }
 
-class itemCell: UICollectionViewCell {
+class ItemCell: UICollectionViewCell {
+    
+    var item: Item? {
+        didSet {
+            if let imageName = item?.imageName {
+                imageView.image = UIImage(named: imageName)
+            }
+        }
+    }
     
     let imageView: UIImageView = {
         let iv = UIImageView()
