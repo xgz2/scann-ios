@@ -22,6 +22,16 @@ module.exports = {
     }
   },
 
+  destroyAll: async function (req, res) {
+    try {
+      await Category.destroy({});
+      console.log("All categories destroyed.");
+      res.end();
+    } catch (err) {
+      return res.serverError(err.toString());
+    }
+  },
+
   // findById: function (req, res) {
   //   const itemId = req.param("itemId");
 

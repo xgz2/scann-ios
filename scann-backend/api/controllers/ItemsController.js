@@ -26,26 +26,26 @@ module.exports = {
     }
   },
 
-  create: async function (req, res) {
-    const name = req.body.name;
-    const imageName = req.body.imageName;
-    const expiration = req.body.expiration;
-    const category = req.body.category;
+  // create: async function (req, res) {
+  //   const name = req.body.name;
+  //   const imageName = req.body.imageName;
+  //   const expiration = req.body.expiration;
+  //   const category = req.body.category;
 
-    try {
-      await Item.create({
-        name: name,
-        imageName: imageName,
-        expiration: expiration,
+  //   try {
+  //     await Item.create({
+  //       name: name,
+  //       imageName: imageName,
+  //       expiration: expiration,
 
-        category: category,
-      });
-      console.log("Finished creating object");
-      res.end();
-    } catch (err) {
-      return res.serverError(err.toString());
-    }
-  },
+  //       category: category,
+  //     });
+  //     console.log("Finished creating object");
+  //     res.end();
+  //   } catch (err) {
+  //     return res.serverError(err.toString());
+  //   }
+  // },
 
   findById: function (req, res) {
     const itemId = req.param("itemId");
@@ -65,5 +65,15 @@ module.exports = {
 
     await Item.destroy({ id: itemId });
     res.send("Deleted post");
+  },
+
+  destroyAll: async function (req, res) {
+    try {
+      await Item.destroy({});
+      console.log("All items destroyed.");
+      res.end();
+    } catch (err) {
+      return res.serverError(err.toString());
+    }
   },
 };

@@ -13,7 +13,9 @@ import UIKit
 
 class ItemDetailViewController: UIViewController {
     
-    private let placeImageView = UIImageView(image: UIImage(named: "itemDetailPlace"))
+    var placeImageView = UIImageView(image: UIImage(named: "eggPlace"))
+    
+    var itemLabel: UILabel?
     
 //    private let addButton = UIButton()
 //    private let favoriteButton = UIButton()
@@ -31,18 +33,19 @@ class ItemDetailViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        view.backgroundColor = .white
-        view = placeImageView
+        view.backgroundColor = .clear
         
-//        view.addSubview(placeImageView)
+        placeImageView.contentMode = .scaleAspectFit
+        view.addSubview(placeImageView)
         
         setupConstraints()
     }
     
     func setupConstraints() {
-//        placeImageView.snp.makeConstraints { make in
-//            make.top.bottom.leading.trailing.equalToSuperview()
-//        }
+        placeImageView.snp.makeConstraints { make in
+            make.top.equalToSuperview().offset(50)
+            make.centerX.equalToSuperview()
+        }
     }
     
 //    required init?(coder: NSCoder) {

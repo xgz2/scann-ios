@@ -24,6 +24,9 @@ class CameraViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        view.backgroundColor = .white
+        
+        cameraContainer.layer.cornerRadius = 20
         view.addSubview(cameraContainer)
         
         cameraManager.cameraDevice = .back
@@ -52,15 +55,22 @@ class CameraViewController: UIViewController {
         captureButton.layer.zPosition = 10
         cameraContainer.addSubview(captureButton)
         
+        view.addSubview(loadingView)
+        
+        setupNavigationItems()
+        setupConstraints()
+    }
+    
+    func setupNavigationItems() {
         navigationController?.navigationBar.barTintColor = .white
         navigationController?.navigationBar.isTranslucent = false
         navigationController?.navigationBar.shadowImage = UIImage()
         
-        view.addSubview(loadingView)
+        let titleImageView = UIImageView(image: UIImage(named: "scannerLogo"))
+        titleImageView.frame = CGRect(x: 0, y: 0, width: 150, height: 34)
+        titleImageView.contentMode = .scaleAspectFit
         
-//        setupCompletedView()
-        
-        setupConstraints()
+        navigationItem.titleView = titleImageView
     }
     
 //    func setupCompletedView() {
@@ -91,14 +101,20 @@ class CameraViewController: UIViewController {
         })
         CATransaction.begin()
         CATransaction.setCompletionBlock({
-            
+            let alert = UIAlertController(title: "Success!", message: "New items have been added to your pantry.", preferredStyle: .alert)
+            alert.addAction(UIAlertAction(title: NSLocalizedString("OK", comment: "Default action"), style: .default, handler: { _ in
+            NSLog("The \"OK\" alert occured.")
+            }))
+            self.present(alert, animated: true, completion: nil)
         })
         loadingView.startAnimation()
         CATransaction.commit()
     }
     
     func setupConstraints() {
-        let captureButttonBottomOffset = -110
+        let cameraBottomOffset = -120
+        let cameraTopOffset = 20
+        let captureButttonBottomOffset = -30
         
         captureButton.snp.makeConstraints{ make in
             make.bottom.equalToSuperview().offset(captureButttonBottomOffset)
@@ -107,7 +123,9 @@ class CameraViewController: UIViewController {
         }
         
         cameraContainer.snp.makeConstraints { make in
-            make.top.bottom.left.right.equalToSuperview()
+            make.top.equalToSuperview().offset(cameraTopOffset)
+            make.bottom.equalToSuperview().offset(cameraBottomOffset)
+            make.left.right.equalToSuperview()
         }
         
 //        completedView.snp.makeConstraints { make in

@@ -65,7 +65,6 @@ class CategoryCell: UICollectionViewCell, UICollectionViewDataSource, UICollecti
         addConstraints(NSLayoutConstraint.constraints(withVisualFormat: "H:|[v0]|", options: NSLayoutConstraint.FormatOptions(), metrics: nil, views: ["v0": itemsCollectionView]))
         
         addConstraints(NSLayoutConstraint.constraints(withVisualFormat: "V:|[nameLabel(30)][v0]|", options: NSLayoutConstraint.FormatOptions(), metrics: nil, views: ["v0": itemsCollectionView, "nameLabel" : nameLabel]))
-
     }
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
@@ -90,7 +89,7 @@ class CategoryCell: UICollectionViewCell, UICollectionViewDataSource, UICollecti
         return UIEdgeInsets(top: 0, left: 14, bottom: 0, right: 14)
     }
     
-    func collectionView(_ collectionView: UICollectionView, didDeselectItemAt indexPath: IndexPath) {
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         if let item = itemCategory?.items?[indexPath.item] {
             print(item)
             pantryViewController!.showItemDetail(forItem: item)

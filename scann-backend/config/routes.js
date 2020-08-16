@@ -22,13 +22,15 @@ module.exports.routes = {
 
   "/items": "ItemsController.items",
   "GET /items/:itemId": "ItemsController.findById",
-  "POST /items": "ItemsController.create",
+  "POST /items": "item/create",
   "DELETE /items/:itemId": "ItemsController.delete",
+  "DELETE /items": "ItemsController.destroyAll",
 
   "/categories": "CategoriesController.categories",
   "GET /categories/:categoryId": "CategoryController.findById",
   "POST /categories": "CategoriesController.create",
   "DELETE /categories/:categoryId": "CategoriesController.delete",
+  "DELETE /categories": "CategoriesController.destroyAll",
   /***************************************************************************
    *                                                                          *
    * More custom routes here...                                               *

@@ -24,9 +24,18 @@ class PantryViewController: UICollectionViewController, UICollectionViewDelegate
             self.itemCategories = itemCategories
             self.collectionView.reloadData()
         }
+        
+//        itemCategories = ItemCategory.fetchDummyItems()
+//        self.collectionView.reloadData()
 
         setupNavigationBarItems()
         setupCollections()
+        
+        let alert = UIAlertController(title: "Items Expiring Soon", message: "Make sure to use your eggs before they expire tomorrow!", preferredStyle: .alert)
+        alert.addAction(UIAlertAction(title: NSLocalizedString("OK", comment: "Default action"), style: .default, handler: { _ in
+        NSLog("The \"OK\" alert occured.")
+        }))
+        self.present(alert, animated: true, completion: nil)
     }
     
     func showItemDetail(forItem item: Item) {
@@ -35,7 +44,7 @@ class PantryViewController: UICollectionViewController, UICollectionViewDelegate
     }
     
     private func setupCollections() {
-        self.clearsSelectionOnViewWillAppear = false
+        self.clearsSelectionOnViewWillAppear = true
         self.collectionView!.register(CategoryCell.self, forCellWithReuseIdentifier: reuseIdentifier)
     }
     
@@ -84,11 +93,7 @@ class PantryViewController: UICollectionViewController, UICollectionViewDelegate
         addButton.setImage(UIImage(named: "pantryPlusImage")!.withRenderingMode(.alwaysOriginal), for: .normal)
         addButton.frame = CGRect(x: 0, y: 0, width: 20, height: 20)
         
-        let subButton = UIButton(type: .system)
-        subButton.setImage(UIImage(named: "pantryMinusImage")!.withRenderingMode(.alwaysOriginal), for: .normal)
-        addButton.frame = CGRect(x: 0, y: 0, width: 20, height: 20)
-        
-        navigationItem.leftBarButtonItems = [UIBarButtonItem(customView: addButton), UIBarButtonItem(customView: subButton)]
+        navigationItem.leftBarButtonItem = UIBarButtonItem(customView: addButton)
     }
     
     private func setupRightNavItems() {

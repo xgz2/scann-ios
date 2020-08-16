@@ -28,11 +28,14 @@
 		035DA53424D60B6400603371 /* Montserrat-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 035DA52224D60B6300603371 /* Montserrat-Regular.ttf */; };
 		035DA53524D60B6400603371 /* Montserrat-SemiBoldItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 035DA52324D60B6300603371 /* Montserrat-SemiBoldItalic.ttf */; };
 		035DA53624D60B6400603371 /* Montserrat-Medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 035DA52424D60B6400603371 /* Montserrat-Medium.ttf */; };
-		035DA53824D60E9C00603371 /* Models.swift in Sources */ = {isa = PBXBuildFile; fileRef = 035DA53724D60E9C00603371 /* Models.swift */; };
+		035DA53824D60E9C00603371 /* PantryModels.swift in Sources */ = {isa = PBXBuildFile; fileRef = 035DA53724D60E9C00603371 /* PantryModels.swift */; };
 		0363A37C24D6AE4E00926E14 /* ItemDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0363A37B24D6AE4E00926E14 /* ItemDetailViewController.swift */; };
 		0363A37F24D7744D00926E14 /* LoadingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0363A37E24D7744D00926E14 /* LoadingView.swift */; };
 		0363A38124D7747600926E14 /* CGRect+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0363A38024D7747600926E14 /* CGRect+Extensions.swift */; };
 		0363A38324D7749600926E14 /* UIColor+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0363A38224D7749600926E14 /* UIColor+Extensions.swift */; };
+		0363A38524D7A35700926E14 /* SearchModels.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0363A38424D7A35700926E14 /* SearchModels.swift */; };
+		0363A38924D7AEB900926E14 /* SearchSectionCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0363A38824D7AEB800926E14 /* SearchSectionCell.swift */; };
+		0363A38B24D88EB800926E14 /* NutritionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0363A38A24D88EB800926E14 /* NutritionView.swift */; };
 		03AA35F324C8D7A500AB9A48 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03AA35F224C8D7A500AB9A48 /* AppDelegate.swift */; };
 		03AA35F924C8D7AF00AB9A48 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 03AA35F824C8D7AF00AB9A48 /* Assets.xcassets */; };
 		03AA35FC24C8D7AF00AB9A48 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 03AA35FB24C8D7AF00AB9A48 /* Preview Assets.xcassets */; };
@@ -40,6 +43,8 @@
 		03AA360A24CA389E00AB9A48 /* CameraViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03AA360924CA389E00AB9A48 /* CameraViewController.swift */; };
 		03AA360C24CA38B100AB9A48 /* SearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03AA360B24CA38B000AB9A48 /* SearchViewController.swift */; };
 		03AA360E24CA38DB00AB9A48 /* DashViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03AA360D24CA38DB00AB9A48 /* DashViewController.swift */; };
+		03B3B92524E99F19001E6BCE /* PantryItemService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03B3B92424E99F19001E6BCE /* PantryItemService.swift */; };
+		03B3B92724E99F89001E6BCE /* SearchService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03B3B92624E99F89001E6BCE /* SearchService.swift */; };
 		A1190C982BBFE2C0CE61212F /* Pods_scann_ios.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A1D6D06C3706CFA21BD53F99 /* Pods_scann_ios.framework */; };
 /* End PBXBuildFile section */
 
@@ -65,11 +70,14 @@
 		035DA52224D60B6300603371 /* Montserrat-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Montserrat-Regular.ttf"; sourceTree = "<group>"; };
 		035DA52324D60B6300603371 /* Montserrat-SemiBoldItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Montserrat-SemiBoldItalic.ttf"; sourceTree = "<group>"; };
 		035DA52424D60B6400603371 /* Montserrat-Medium.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Montserrat-Medium.ttf"; sourceTree = "<group>"; };
-		035DA53724D60E9C00603371 /* Models.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Models.swift; sourceTree = "<group>"; };
+		035DA53724D60E9C00603371 /* PantryModels.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PantryModels.swift; sourceTree = "<group>"; };
 		0363A37B24D6AE4E00926E14 /* ItemDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemDetailViewController.swift; sourceTree = "<group>"; };
 		0363A37E24D7744D00926E14 /* LoadingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadingView.swift; sourceTree = "<group>"; };
 		0363A38024D7747600926E14 /* CGRect+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CGRect+Extensions.swift"; sourceTree = "<group>"; };
 		0363A38224D7749600926E14 /* UIColor+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+Extensions.swift"; sourceTree = "<group>"; };
+		0363A38424D7A35700926E14 /* SearchModels.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchModels.swift; sourceTree = "<group>"; };
+		0363A38824D7AEB800926E14 /* SearchSectionCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchSectionCell.swift; sourceTree = "<group>"; };
+		0363A38A24D88EB800926E14 /* NutritionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NutritionView.swift; sourceTree = "<group>"; };
 		03AA35EF24C8D7A500AB9A48 /* scann-ios.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "scann-ios.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		03AA35F224C8D7A500AB9A48 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		03AA35F824C8D7AF00AB9A48 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -79,6 +87,8 @@
 		03AA360924CA389E00AB9A48 /* CameraViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CameraViewController.swift; sourceTree = "<group>"; };
 		03AA360B24CA38B000AB9A48 /* SearchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchViewController.swift; sourceTree = "<group>"; };
 		03AA360D24CA38DB00AB9A48 /* DashViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DashViewController.swift; sourceTree = "<group>"; };
+		03B3B92424E99F19001E6BCE /* PantryItemService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PantryItemService.swift; sourceTree = "<group>"; };
+		03B3B92624E99F89001E6BCE /* SearchService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchService.swift; sourceTree = "<group>"; };
 		6F3C63AF6252C0C96327417E /* Pods-scann-ios.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-scann-ios.release.xcconfig"; path = "Target Support Files/Pods-scann-ios/Pods-scann-ios.release.xcconfig"; sourceTree = "<group>"; };
 		A1D6D06C3706CFA21BD53F99 /* Pods_scann_ios.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_scann_ios.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		BE236617CF5B90C01F315F69 /* Pods-scann-ios.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-scann-ios.debug.xcconfig"; path = "Target Support Files/Pods-scann-ios/Pods-scann-ios.debug.xcconfig"; sourceTree = "<group>"; };
@@ -100,6 +110,7 @@
 			isa = PBXGroup;
 			children = (
 				035DA50C24D5F7C300603371 /* CategoryCell.swift */,
+				0363A38824D7AEB800926E14 /* SearchSectionCell.swift */,
 			);
 			path = Cells;
 			sourceTree = "<group>";
@@ -107,7 +118,8 @@
 		035DA50924D4E14300603371 /* Models */ = {
 			isa = PBXGroup;
 			children = (
-				035DA53724D60E9C00603371 /* Models.swift */,
+				035DA53724D60E9C00603371 /* PantryModels.swift */,
+				0363A38424D7A35700926E14 /* SearchModels.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -152,6 +164,7 @@
 			isa = PBXGroup;
 			children = (
 				0363A37E24D7744D00926E14 /* LoadingView.swift */,
+				0363A38A24D88EB800926E14 /* NutritionView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -186,6 +199,7 @@
 				035DA50E24D60ACE00603371 /* Extensions */,
 				035DA51224D60AF900603371 /* Fonts */,
 				035DA50924D4E14300603371 /* Models */,
+				03B3B92324E99EB0001E6BCE /* Service */,
 				0363A37D24D7743D00926E14 /* Views */,
 			);
 			path = "scann-ios";
@@ -210,6 +224,15 @@
 				0363A37B24D6AE4E00926E14 /* ItemDetailViewController.swift */,
 			);
 			path = Controllers;
+			sourceTree = "<group>";
+		};
+		03B3B92324E99EB0001E6BCE /* Service */ = {
+			isa = PBXGroup;
+			children = (
+				03B3B92424E99F19001E6BCE /* PantryItemService.swift */,
+				03B3B92624E99F89001E6BCE /* SearchService.swift */,
+			);
+			path = Service;
 			sourceTree = "<group>";
 		};
 		4E0B2A7A0BCFB227A346939E /* Pods */ = {
@@ -384,14 +407,19 @@
 				03AA360824CA389100AB9A48 /* PantryViewController.swift in Sources */,
 				0363A38324D7749600926E14 /* UIColor+Extensions.swift in Sources */,
 				03AA35F324C8D7A500AB9A48 /* AppDelegate.swift in Sources */,
+				0363A38B24D88EB800926E14 /* NutritionView.swift in Sources */,
 				0363A37F24D7744D00926E14 /* LoadingView.swift in Sources */,
 				035DA50D24D5F7C300603371 /* CategoryCell.swift in Sources */,
 				032D995124CF65DD0004DD95 /* MainTabBarController.swift in Sources */,
-				035DA53824D60E9C00603371 /* Models.swift in Sources */,
+				03B3B92724E99F89001E6BCE /* SearchService.swift in Sources */,
+				035DA53824D60E9C00603371 /* PantryModels.swift in Sources */,
 				03AA360E24CA38DB00AB9A48 /* DashViewController.swift in Sources */,
+				03B3B92524E99F19001E6BCE /* PantryItemService.swift in Sources */,
 				03AA360C24CA38B100AB9A48 /* SearchViewController.swift in Sources */,
 				035DA51024D60AE100603371 /* UIFont+Extensions.swift in Sources */,
+				0363A38924D7AEB900926E14 /* SearchSectionCell.swift in Sources */,
 				03AA360A24CA389E00AB9A48 /* CameraViewController.swift in Sources */,
+				0363A38524D7A35700926E14 /* SearchModels.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

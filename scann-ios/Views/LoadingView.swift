@@ -154,7 +154,7 @@ class OvalLayer: CAShapeLayer {
         wobbleAnimationGroup.animations = [wobbleAnimation1, wobbleAnimation2, wobbleAnimation3,
                                            wobbleAnimation4]
         wobbleAnimationGroup.duration = wobbleAnimation4.beginTime + wobbleAnimation4.duration
-        wobbleAnimationGroup.repeatCount = 5
+        wobbleAnimationGroup.repeatCount = 3
         wobbleAnimationGroup.isRemovedOnCompletion = true
         add(wobbleAnimationGroup, forKey: "load")
         
