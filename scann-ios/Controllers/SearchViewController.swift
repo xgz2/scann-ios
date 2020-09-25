@@ -22,7 +22,7 @@ class SearchViewController: UICollectionViewController, UICollectionViewDelegate
         
         collectionView.backgroundColor = .white
         
-        searchCategories = SearchCategory.fetchDummyItems()
+        searchCategories = SearchService.fetchDummyItems()
 //        searchCategories = []
 
         

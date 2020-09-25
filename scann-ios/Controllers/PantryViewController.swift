@@ -20,13 +20,13 @@ class PantryViewController: UICollectionViewController, UICollectionViewDelegate
         
         collectionView.backgroundColor = .white
         
-        ItemCategory.fetchPantryItems { (itemCategories) -> () in
-            self.itemCategories = itemCategories
-            self.collectionView.reloadData()
-        }
+//        ItemCategory.fetchPantryItems { (itemCategories) -> () in
+//            self.itemCategories = itemCategories
+//            self.collectionView.reloadData()
+//        }
         
-//        itemCategories = ItemCategory.fetchDummyItems()
-//        self.collectionView.reloadData()
+        itemCategories = PantryItemService.fetchDummyItems()
+        self.collectionView.reloadData()
 
         setupNavigationBarItems()
         setupCollections()
